@@ -1,0 +1,504 @@
+<div class="page">
+	<div class="navbar navbar-style-1 border-bottom">
+		<div class="navbar-inner">
+			<a href="#" class="link back">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M0.439312 13.0606L5.75391 18.3752C6.04683 18.6682 6.43069 18.8146 6.81459 18.8146C7.1985 18.8146 7.58236 18.6682 7.87528 18.3752C8.46103 17.7894 8.46103 16.8397 7.87528 16.2539L5.12133 13.5H22.5C23.3284 13.5 24 12.8284 24 12C24 11.1716 23.3284 10.5 22.5 10.5H5.12133L7.87528 7.7461C8.46103 7.1603 8.46103 6.21057 7.87528 5.62477C7.28944 5.03898 6.33975 5.03898 5.75391 5.62477L0.439312 10.9394C-0.146437 11.5251 -0.146437 12.4749 0.439312 13.0606Z"
+						fill="black" />
+				</svg>
+			</a>
+			<div class="title">Restaurents</div>
+			<div class="right">
+				<a href="#" class="link">
+					<svg xmlns="http://www.w3.org/2000/svg" height="29px" viewBox="0 -960 960 960" width="28px"
+						fill="#5f6368">
+						<path
+							d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content pt-70 location-wraper bg-gray">
+
+		<!-- Search backdrop -->
+		<div class="searchbar-backdrop"></div>
+
+		<div class="fixed-toolbar mb-30">
+
+			<div class="container">
+				<!-- Search -->
+				<form data-search-container=".search-list" data-search-in=".item-title"
+					class="searchbar searchbar-init search-box list-search-bx">
+					<div class="searchbar-inner">
+						<div class="searchbar-input-wrap">
+							<input type="search" placeholder="Search address" />
+							<i class="searchbar-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M9.65925 19.3102C11.8044 19.3103 13.8882 18.5946 15.5806 17.2764L21.9653 23.6612C22.4423 24.1218 23.2023 24.1086 23.663 23.6316C24.1123 23.1664 24.1123 22.4288 23.663 21.9636L17.2782 15.5788C20.5491 11.3682 19.7874 5.30335 15.5769 2.03244C11.3663 -1.23846 5.30149 -0.476784 2.03058 3.73376C-1.24033 7.9443 -0.478646 14.0092 3.73189 17.2801C5.42702 18.597 7.51269 19.3113 9.65925 19.3102ZM4.52915 4.52732C7.36245 1.69396 11.9561 1.69391 14.7895 4.52721C17.6229 7.36052 17.6229 11.9542 14.7896 14.7876C11.9563 17.6209 7.36261 17.621 4.52925 14.7877C4.5292 14.7876 4.5292 14.7876 4.52915 14.7876C1.69584 11.9749 1.67915 7.39796 4.49181 4.56465C4.50424 4.55217 4.51667 4.53974 4.52915 4.52732Z"
+										fill="#C9C9C9" />
+								</svg>
+							</i>
+						</div>
+					</div>
+				</form>
+				<style>
+					.tab-link-active {
+						background-color: rgb(31, 126, 42) !important;
+						color: rgb(255, 255, 255) !important;
+					}
+
+					.res-slider swiper-slide {
+						width: 55% !important;
+					}
+
+					.tab-active {
+						padding-bottom: 1rem;
+					}
+				</style>
+				<swiper-container class="tabbar tab-style-1 main-swiper res-slider" space-between="12"
+					slides-per-view="auto">
+					<swiper-slide>
+						<a href="#tabNearMe" class="tab-link tab-link-active chip chip-outline">Near Me</a>
+					</swiper-slide>
+					<swiper-slide>
+						<a href="#tabPopular" class="tab-link chip chip-outline">Popular</a>
+					</swiper-slide>
+					<swiper-slide>
+						<a href="#tabTopRated" class="tab-link chip chip-outline">Top Rated</a>
+					</swiper-slide>
+					<swiper-slide>
+						<a href="#tabOther" class="tab-link chip chip-outline">Other</a>
+					</swiper-slide>
+				</swiper-container>
+				<div class="list simple-list searchbar-not-found">
+					<ul>
+						<li>Nothing found</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="">
+			<div class="tabs tabs-height-auto restaurents"
+				style="height: inherit !important;overflow-y: visible !important;margin-bottom: 60px;">
+				<div id="tabNearMe" class="tab tab-active" style="height: auto;">
+					<div class="container">
+						<div class="list search-list mt-0 mb-20 searchbar-found">
+							<!-- <h6 class="filter-text mt-0 mb-30" style="font-size: medium;">We have <strong class="text-black"
+									id="total-item">46</strong> Outled ready to
+								serve you</h6> -->
+							<ul class="grid medium-grid-cols-2 grid-gap">
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="tabPopular" class="tab" style="height: auto;">
+					<div class="container">
+						<div class="list search-list mt-0 mb-20 dz-list searchbar-found">
+							<ul class="grid medium-grid-cols-2 grid-gap">
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="tabTopRated" class="tab" style="height: auto;">
+					<div class="container">
+						<div class="list search-list mt-0 mb-20 dz-list searchbar-found">
+							<ul class="grid medium-grid-cols-2 grid-gap">
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="tabOther" class="tab" style="height: auto;">
+					<div class="container">
+						<div class="list search-list mt-0 mb-20 dz-list searchbar-found">
+							<ul class="grid medium-grid-cols-2 grid-gap">
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+								<li>
+									<div class="item-bx"
+										style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;">
+										<div class="dz-media">
+											<a href="/recipe-detail/"><img loading="lazy"
+													src="https://b.zmtcdn.com/data/pictures/chains/0/19287230/1cc6b76b7bac17d3409381995f37d3fd_featured_v2.jpg"
+													alt="" /></a>
+										</div>
+										<div class="dz-info">
+											<div class="item-content">
+												<h6 class="item-title"
+													style="font-size:medium;margin-left: -8px;margin-top: 4px;">
+													<a href="/recipe-detail/"
+														style="font-size: 12px;text-overflow: ellipsis;overflow: hidden;white-space: no-wrap;max-width: 50px;">Waheguru
+														Shudh Shakahari
+														Bhojnalaya</a><br>
+													<span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+														Maharasthra</span>
+												</h6>
+												<div class="item-after"
+													style="margin-top: -40px;font-size: 13px;line-height: 2px;"><span
+														class="badge">4.4&nbsp;<i class="fa fa-star"></i></span></div>
+											</div>
+										</div>
+										<div class="card-footer"
+											style="border-top: dotted 1px #000;font-size: 10px;font-weight:bolder;padding: 2px 0;padding-left: 15px;">
+											North Indian, Chineese, Veg, Non Veg</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

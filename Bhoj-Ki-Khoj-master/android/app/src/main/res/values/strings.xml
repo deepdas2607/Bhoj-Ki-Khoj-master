@@ -1,0 +1,4 @@
+<resources>
+    <string name="shortcut_long_label_track_orders">Track Orders</string>
+    <string name="shortcut_short_label_track_orders">Orders</string>
+</resources>

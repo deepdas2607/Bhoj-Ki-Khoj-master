@@ -1,0 +1,139 @@
+<template>
+    <div class="page light">
+        <div class="navbar navbar-style-1 navbar-transparent">
+            <div class="navbar-inner">
+                <a href="#" class="link back">
+                    <svg height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z" />
+                    </svg>
+                </a>
+                <div class="title">Bhojnalaya</div>
+                <div class="right">
+                    <a href="#" class="link add-wishlist-btn" @click=${openDemo1}>
+                        <i class="far fa-bookmark"></i>
+                        <i class="fas fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-content item-detail pt-0 pb-10">
+
+            <div class="dz-banner-heading">
+                <div class="overlay-black-light">
+                    <img src="{{restaurent.photoUrl}}" class="bnr-img" alt="" />
+                </div>
+            </div>
+
+            <div class="dz-banner-height"></div>
+
+            <div class="fixed-content container">
+                <div class="item-info">
+                    <h3 class="title">{{restaurent.name}}</h3>
+                    <ul class="tag-list">
+                        {{#each restaurent.tags}}
+                        <li><a href="#">{{this}}</a></li>
+                        {{/each}}
+                    </ul>
+                    <div class="reviews-info">
+                        <div class="clearfix">
+                            <ul>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star-half-alt"></i></li>
+                            </ul>
+                            <h4 class="reviews">{{restaurent.rating}} <span class="reviews-text">(128 reviews)</span>
+                            </h4>
+                        </div>
+                        <div class="clearfix">
+                            <div class="badge"
+                                style="position: absolute;margin: -26px 0 0 10px;background: white;backdrop-filter: blur(20px);height: 60x;max-width: 30%;">
+                                <img src="https://bhoj-ki-khoj.surge.sh/img/veg.png" class="food-type" alt="">
+                                <img src="https://bhoj-ki-khoj.surge.sh/img/non-veg.png" class="food-type" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/orders/" class="cart-btn">
+                        <svg height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <path
+                                    d="m20 18h-11a1 1 0 0 1 0-2h11a1 1 0 0 0 .977-.783l2-9a1 1 0 0 0 -.977-1.217h-15.281l-.744-3.225a1 1 0 0 0 -.975-.775h-3a1 1 0 0 0 0 2h2.2l2.735 11.834a2.993 2.993 0 0 0 2.065 5.166h11a1 1 0 0 0 0-2zm.753-11-1.553 7h-10.4l-1.62-7z"
+                                    fill="#fff" />
+                                <circle cx="10" cy="22" r="1" fill="#fff" />
+                                <circle cx="18" cy="22" r="1" fill="#fff" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="grid grid-cols-3 grid-gap">
+                    <div>
+                        <div class="icon-bx-left">
+                            <div class="icon-bx">
+                                <svg enable-background="new 0 0 512 512" height="24" viewBox="0 0 512 512" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m174.987 48.414c64.93 0 119.721 44.206 135.882 104.099l24.452-24.452 21.213 21.213-40.82 40.82v38.24h12.436c53.363 0 96.777-43.414 96.777-96.777v-71.89h-71.891c-17.956 0-34.782 4.922-49.211 13.478-10.572-41.977-48.639-73.145-93.852-73.145h-71.89v53.333c11.767-3.201 24.138-4.919 36.904-4.919z" />
+                                        <path
+                                            d="m217.204 310.206h-152.943v91.067c0 61.055 49.672 110.727 110.726 110.727 19.581 0 37.986-5.116 53.962-14.071-26.313-27.15-40.784-62.818-40.784-100.716.001-31.813 10.2-62.055 29.039-87.007z" />
+                                        <path
+                                            d="m64.261 280.206h183.375c11.694-8.565 24.511-15.256 38.078-19.924v-71.142c0-61.055-49.672-110.727-110.727-110.727s-110.726 49.672-110.726 110.727z" />
+                                        <path
+                                            d="m332.953 282.427c-63.395 0-114.786 51.392-114.786 114.786 0 63.395 51.391 114.786 114.786 114.786s114.786-51.392 114.786-114.786-51.392-114.786-114.786-114.786zm51.169 129.787h-36.17v36.17h-30v-36.17h-36.17v-30h36.17v-36.17h30v36.17h36.17z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="icon-content">
+                                <h5 class="title">Hand Sanitized</h5>
+                                <p>Weekly</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="icon-bx-left">
+                            <div class="icon-bx">
+                                <svg enable-background="new 0 0 512 512" height="24" viewBox="0 0 512 512" width="24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path
+                                            d="m265.011 469.333c0-40.069 32.598-72.667 72.667-72.667h26.73v-154.975c0-20.05-8.979-38.732-24.635-51.256l-20.378-16.303v-31.132h-228.059v31.133l-20.378 16.303c-15.656 12.525-24.635 31.207-24.635 51.256v270.308h232.586c-8.73-11.991-13.898-26.733-13.898-42.667zm-93.696-207.564 34.763 100.625 33.279-100.205 28.471 9.456-47.703 143.638h-27.515l-49.65-143.718z" />
+                                        <path d="m265.628 0h74.003v113h-74.003z" />
+                                        <path d="m175.103 0h60.525v113h-60.525z" />
+                                        <path d="m71.1 0h74.003v113h-74.003z" />
+                                        <path
+                                            d="m465.677 469.333c0-23.564-19.103-42.667-42.667-42.667h-27.667v85.334h27.667c23.565 0 42.667-19.103 42.667-42.667z" />
+                                        <path
+                                            d="m365.344 512v-85.333h-27.666c-23.564 0-42.667 19.103-42.667 42.667 0 23.564 19.103 42.667 42.667 42.667h27.666z" />
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="icon-content">
+                                <h5 class="title">A+</h5>
+                                <p>Quality</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h5 class="mb-0">Description</h5>
+                <p>{{restaurent.description}}</p>
+
+                <h5 class="mb-0">Menus</h5>
+                <div class="right">
+                    <a href="">See all menus
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    export default (props) => {
+        const openDemo1 = () => {
+            $('.add-wishlist-btn').toggleClass('active');
+        }
+        return $render;
+    }
+</script>

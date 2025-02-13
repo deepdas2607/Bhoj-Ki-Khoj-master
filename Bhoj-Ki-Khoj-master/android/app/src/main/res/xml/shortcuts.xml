@@ -1,0 +1,14 @@
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="track_orders"
+        android:enabled="true"
+        android:icon="@drawable/ic_cart"
+        android:shortcutLongLabel="@string/shortcut_long_label_track_orders"
+        android:shortcutShortLabel="@string/shortcut_short_label_track_orders">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.krish.MainActivity"
+            android:targetPackage="com.krish.bhoj_ki_khoj" />
+        <categories android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

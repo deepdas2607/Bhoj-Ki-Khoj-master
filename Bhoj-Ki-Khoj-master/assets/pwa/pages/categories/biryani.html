@@ -1,0 +1,459 @@
+<div class="page">
+	<div class="navbar navbar-style-1 border-bottom">
+		<div class="navbar-inner">
+			<a href="#" class="link back">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M0.439312 13.0606L5.75391 18.3752C6.04683 18.6682 6.43069 18.8146 6.81459 18.8146C7.1985 18.8146 7.58236 18.6682 7.87528 18.3752C8.46103 17.7894 8.46103 16.8397 7.87528 16.2539L5.12133 13.5H22.5C23.3284 13.5 24 12.8284 24 12C24 11.1716 23.3284 10.5 22.5 10.5H5.12133L7.87528 7.7461C8.46103 7.1603 8.46103 6.21057 7.87528 5.62477C7.28944 5.03898 6.33975 5.03898 5.75391 5.62477L0.439312 10.9394C-0.146437 11.5251 -0.146437 12.4749 0.439312 13.0606Z"
+						fill="black" />
+				</svg>
+			</a>
+			<div class="title">Biryani</div>
+			<div class="right">
+				<a href="#" class="link">
+					&nbsp;
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content pt-70 location-wraper bg-gray">
+
+		<!-- Search backdrop -->
+		<div class="searchbar-backdrop"></div>
+
+		<div class="fixed-toolbar mb-30">
+
+			<div class="container">
+				<!-- Search -->
+				<form data-search-container=".search-list" data-search-in=".item-title"
+					class="searchbar searchbar-init search-box list-search-bx">
+					<div class="searchbar-inner">
+						<div class="searchbar-input-wrap">
+							<input type="search" placeholder="Search address" />
+							<i class="searchbar-icon">
+								<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M9.65925 19.3102C11.8044 19.3103 13.8882 18.5946 15.5806 17.2764L21.9653 23.6612C22.4423 24.1218 23.2023 24.1086 23.663 23.6316C24.1123 23.1664 24.1123 22.4288 23.663 21.9636L17.2782 15.5788C20.5491 11.3682 19.7874 5.30335 15.5769 2.03244C11.3663 -1.23846 5.30149 -0.476784 2.03058 3.73376C-1.24033 7.9443 -0.478646 14.0092 3.73189 17.2801C5.42702 18.597 7.51269 19.3113 9.65925 19.3102ZM4.52915 4.52732C7.36245 1.69396 11.9561 1.69391 14.7895 4.52721C17.6229 7.36052 17.6229 11.9542 14.7896 14.7876C11.9563 17.6209 7.36261 17.621 4.52925 14.7877C4.5292 14.7876 4.5292 14.7876 4.52915 14.7876C1.69584 11.9749 1.67915 7.39796 4.49181 4.56465C4.50424 4.55217 4.51667 4.53974 4.52915 4.52732Z"
+										fill="#C9C9C9" />
+								</svg>
+							</i>
+						</div>
+					</div>
+				</form>
+				<div class="list simple-list searchbar-not-found">
+					<ul>
+						<li>Nothing found</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        <style>
+            .item-list.food .item-bx {
+                padding: 2px;
+            }
+            .item-list.food swiper-slide {
+                width: 150px;
+            }
+            .item-list.food .item-title {
+                max-width: 90%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 12px;
+            }
+            .item-list.food .stars {
+                position: absolute;
+                top: 10px;
+                left: 8px;
+                font-size: x-small;
+                background-color: white;
+                padding: 0 8px;
+            }
+            .item-list.food .dz-info {
+                padding: 5px 0 13px 10px;
+                margin-top: -15px;
+            }
+            .item-list.food .dz-media {
+                height: 125px;
+            }
+            .item-list.food .dz-meta .price {
+                font-size: small;
+                padding-top: 8px;
+            }
+            .item-list.food .dz-meta {
+                border-top: dashed 1px #aaa;
+            }
+            .item-list.food .dz-meta .price del {
+                font-size: smaller;
+            }
+        </style>
+		<div class="container" style="max-width: 100vw !important;margin-left: -4vw;">
+            <div class="list search-list mt-0 mb-20 searchbar-found">
+                <ul class="grid medium-grid-cols-2 grid-gap" style="margin-right: auto;">
+                    <li>
+                        <div class="item-bx"
+                            style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;max-width: 90vw;">
+                            <swiper-container class="swiper-init mb-10 card-swipper1 item-list food" space-between="10" slides-per-view="auto"
+								style="max-width: 100%;">
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/146/0bc36d0cd6802bce4d2965fe4f495146.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.4
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Gobhi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/038/6fb7a4f81370785e22ec9bcf9fb5d038.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Bhindi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/291/dc9a6ce29464bec08d98438c67218291.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.5
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Dal Fry With Roti Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/45a/f43cffc4092b9518dd75bb24b31a045a.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Chole Rice Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+							</swiper-container>
+                            <div class="dz-info">
+                                <div class="item-content">
+                                    <h6 class="item-title"
+                                        style="margin-left: -8px;margin-top: 4px;max-width: 80%;overflow: hidden !important;">
+                                        <a href="/restaurents/1"
+                                            style="font-size: 12px;text-overflow: ellipsis;white-space: nowrap;">Waheguru
+                                            Shudh Shakahari
+                                            Bhojnalaya</a><br>
+                                        <span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+                                            Maharasthra</span>
+                                    </h6>
+                                    <div class="item-after" style="margin-top: -40px;font-size: 13px;">
+                                        <div class="badge color-green">4.4&nbsp;<i class="fa fa-star"></i></div>
+                                        <div style="position: absolute;margin: 30px 0 0 -15px;"><i class="f7-icons"
+                                                style="font-size: medium;">placemark_fill</i>&nbsp;4.4km</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-bx"
+                            style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;max-width: 90vw;">
+                            <swiper-container class="swiper-init mb-10 card-swipper1 item-list food" space-between="10" slides-per-view="auto"
+								style="max-width: 100%;">
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/146/0bc36d0cd6802bce4d2965fe4f495146.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.4
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Gobhi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/038/6fb7a4f81370785e22ec9bcf9fb5d038.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Bhindi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/291/dc9a6ce29464bec08d98438c67218291.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.5
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Dal Fry With Roti Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/45a/f43cffc4092b9518dd75bb24b31a045a.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Chole Rice Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+							</swiper-container>
+                            <div class="dz-info">
+                                <div class="item-content">
+                                    <h6 class="item-title"
+                                        style="margin-left: -8px;margin-top: 4px;max-width: 80%;overflow: hidden !important;">
+                                        <a href="#"
+                                            style="font-size: 12px;text-overflow: ellipsis;white-space: nowrap;">Waheguru
+                                            Shudh Shakahari
+                                            Bhojnalaya</a><br>
+                                        <span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+                                            Maharasthra</span>
+                                    </h6>
+                                    <div class="item-after" style="margin-top: -40px;font-size: 13px;">
+                                        <div class="badge color-green">4.4&nbsp;<i class="fa fa-star"></i></div>
+                                        <div style="position: absolute;margin: 30px 0 0 -15px;"><i class="f7-icons"
+                                                style="font-size: medium;">placemark_fill</i>&nbsp;4.4km</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-bx"
+                            style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;max-width: 90vw;">
+                            <swiper-container class="swiper-init mb-10 card-swipper1 item-list food" space-between="10" slides-per-view="auto"
+								style="max-width: 100%;">
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/146/0bc36d0cd6802bce4d2965fe4f495146.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.4
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Gobhi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/038/6fb7a4f81370785e22ec9bcf9fb5d038.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Bhindi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/291/dc9a6ce29464bec08d98438c67218291.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.5
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Dal Fry With Roti Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/45a/f43cffc4092b9518dd75bb24b31a045a.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Chole Rice Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+							</swiper-container>
+                            <div class="dz-info">
+                                <div class="item-content">
+                                    <h6 class="item-title"
+                                        style="margin-left: -8px;margin-top: 4px;max-width: 80%;overflow: hidden !important;">
+                                        <a href="#"
+                                            style="font-size: 12px;text-overflow: ellipsis;white-space: nowrap;">Waheguru
+                                            Shudh Shakahari
+                                            Bhojnalaya</a><br>
+                                        <span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+                                            Maharasthra</span>
+                                    </h6>
+                                    <div class="item-after" style="margin-top: -40px;font-size: 13px;">
+                                        <div class="badge color-green">4.4&nbsp;<i class="fa fa-star"></i></div>
+                                        <div style="position: absolute;margin: 30px 0 0 -15px;"><i class="f7-icons"
+                                                style="font-size: medium;">placemark_fill</i>&nbsp;4.4km</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-bx"
+                            style="box-shadow: 2px 2px 10px #bbb; border-radius: 10px; padding: 5px;max-width: 90vw;">
+                            <swiper-container class="swiper-init mb-10 card-swipper1 item-list food" space-between="10" slides-per-view="auto"
+								style="max-width: 100%;">
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/146/0bc36d0cd6802bce4d2965fe4f495146.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.4
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Gobhi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/038/6fb7a4f81370785e22ec9bcf9fb5d038.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Aloo Bhindi Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/291/dc9a6ce29464bec08d98438c67218291.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.5
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Dal Fry With Roti Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+								<swiper-slide>
+									<div class="item-bx item-grid">
+										<div class="dz-media">
+											<a href="#"><img
+													src="https://b.zmtcdn.com/data/dish_photos/45a/f43cffc4092b9518dd75bb24b31a045a.jpeg" alt="" /></a>
+											<div class="chip chip-outline stars">
+												<i class="fa fa-star" style="color: rgb(255, 188, 3);"></i>&nbsp;4.3
+											</div>
+										</div>
+										<div class="dz-info">
+											<div class="dz-head">
+												<h6 class="item-title"><a href="#">Chole Rice Combo</a></h6>
+											</div>
+										</div>
+									</div>
+								</swiper-slide>
+							</swiper-container>
+                            <div class="dz-info">
+                                <div class="item-content">
+                                    <h6 class="item-title"
+                                        style="margin-left: -8px;margin-top: 4px;max-width: 80%;overflow: hidden !important;">
+                                        <a href="#"
+                                            style="font-size: 12px;text-overflow: ellipsis;white-space: nowrap;">Waheguru
+                                            Shudh Shakahari
+                                            Bhojnalaya</a><br>
+                                        <span style="font-size: 10px;color: #bbb;">Andheri, Mumbai,
+                                            Maharasthra</span>
+                                    </h6>
+                                    <div class="item-after" style="margin-top: -40px;font-size: 13px;">
+                                        <div class="badge color-green">4.4&nbsp;<i class="fa fa-star"></i></div>
+                                        <div style="position: absolute;margin: 30px 0 0 -15px;"><i class="f7-icons"
+                                                style="font-size: medium;">placemark_fill</i>&nbsp;4.4km</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
+</div>

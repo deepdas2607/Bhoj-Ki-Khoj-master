@@ -1,0 +1,127 @@
+<template>
+    <div class="page">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">Back</span>
+                    </a>
+                </div>
+                <div class="title">Settings</div>
+                <div class="right">
+                </div>
+                <div class="title-large">
+                    <div class="title-large-text">Settings</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block-title block-title-medium">Account</div>
+            <div class="block block-strong inset">
+                <p></p>
+                <div class="list list-outline-ios list-strong-ios list-dividers-ios">
+                    <ul>
+                        <li>
+                            <a class="item-link item-content">
+                                <div class="item-media"><i class="icon material-icons">person</i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        <div class="item-header">Name</div>
+                                        <span id="username">Not Given</span>
+                                    </div>
+                                    <div class="item-after">Edit</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item-link item-content">
+                                <div class="item-media"><i class="icon material-icons">call</i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        <div class="item-header">Phone</div>
+                                        <span id="phone">Not Given</span>
+                                    </div>
+                                    <div class="item-after">Edit</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item-link item-content">
+                                <div class="item-media"><i class="icon material-icons">mail</i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        <div class="item-header">Email</div>
+                                        <span id="email">Not Given</span>
+                                    </div>
+                                    <div class="item-after">Edit</div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="item-content">
+                                <div class="item-media"><i class="icon material-icons">person_pin_circle</i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        <div class="item-header">Location</div>
+                                        <span id="location">Mumbai, IN</span>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="block-title block-title-medium">App Theme</div>
+            <div class="block block-strong inset">
+                <p></p>
+                <div class="list list-outline-ios list-strong-ios list-dividers-ios">
+                    <a class="item-link smart-select smart-select-init" data-open-in="sheet">
+                        <select name="app-theme">
+                            <option value="system" selected>System Default</option>
+                            <option value="dark">Dark</option>
+                            <option value="light">Light</option>
+                        </select>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon material-icons">palette</i></div>
+                            <div class="item-inner">
+                                <div class="item-title">Theme</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="block-title block-title-medium" style="color: rgba(20, 66, 14, 0.966);">Danzer Zone</div>
+            <div class="block block-strong block-outline inset" style="background-color: rgba(219, 12, 12, 0.349);">
+                <p>Are you sure you want to proceed? Deleting your account will permanently erase all your data and
+                    cannot be undone. Alternatively, you can temporarily disable your account, allowing you to
+                    reactivate it anytime. Please choose carefully.</p>
+                <div class="grid grid-cols-2 grid-gap">
+                    <button class="button button-fill color-red">Delete Account</button>
+                    <button class="button button-fill color-blue">Disable Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    let theme = 'light';
+
+    export default (props, { $f7, $, $on, $onMounted, $update }) => {
+        const toggleScheme = (newTheme) => {
+            $f7.setDarkMode(newTheme === 'dark');
+            theme = newTheme;
+            $update();
+        }
+
+        $on('pageInit', () => {
+
+        });
+
+        return $render;
+    };
+
+</script>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "518730146197",
+    "firebase_url": "https://bhoj-ki-khoj-default-rtdb.firebaseio.com",
+    "project_id": "bhoj-ki-khoj",
+    "storage_bucket": "bhoj-ki-khoj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:518730146197:android:fa7000c79603b46772569c",
+        "android_client_info": {
+          "package_name": "com.krish.bhoj_ki_khoj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "518730146197-d7rag6ae95d90roahq5kc9k5lir68ke2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD40FjzMYR9PEQSeC3x9eJMlL9GF8xZtpE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "518730146197-d7rag6ae95d90roahq5kc9k5lir68ke2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,84 @@
+<template>
+	<div class="page light">
+		<div class="navbar navbar-style-1 navbar-transparent">
+			<div class="navbar-inner">
+				<a href="#" class="link back">
+					<svg height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+						<path d="m22 11h-17.586l5.293-5.293a1 1 0 1 0 -1.414-1.414l-7 7a1 1 0 0 0 0 1.414l7 7a1 1 0 0 0 1.414-1.414l-5.293-5.293h17.586a1 1 0 0 0 0-2z"/>
+					</svg>
+				</a>
+				<div class="title">Details</div>
+				<div class="right">
+					<a href="#" class="link add-wishlist-btn" @click=${openDemo1}>
+						<i class="far fa-bookmark"></i>
+						<i class="fas fa-bookmark"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="page-content item-detail pt-0 pb-10">
+			
+			<div class="dz-banner-heading">
+				<div class="overlay-black-light">
+					<img src="https://sayur.dexignzone.com/xhtml/img/background/bg1.jpg" class="bnr-img" alt=""/>
+				</div>
+			</div>
+			
+			<div class="dz-banner-height"></div>
+			
+			<div class="fixed-content container">
+				<div class="item-info">
+					<h3 class="title">{{food.name}}</h3>
+					<ul class="tag-list">
+						{{#each food.tags}}
+                        <li><a href="#">{{this}}</a></li>
+                        {{/each}}
+					</ul>
+					<div class="reviews-info">
+						<div class="clearfix">
+							<ul>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star-half-alt"></i></li>
+							</ul>
+							<h4 class="reviews">4.5 <span class="reviews-text">(128 reviews)</span></h4>
+						</div>
+						<div class="clearfix">
+							<h3 class="text-primary price">{{food.price}}</h3>
+						</div>
+					</div>
+					<a href="/orders/" class="cart-btn">
+						<svg height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+							<g>
+								<path d="m20 18h-11a1 1 0 0 1 0-2h11a1 1 0 0 0 .977-.783l2-9a1 1 0 0 0 -.977-1.217h-15.281l-.744-3.225a1 1 0 0 0 -.975-.775h-3a1 1 0 0 0 0 2h2.2l2.735 11.834a2.993 2.993 0 0 0 2.065 5.166h11a1 1 0 0 0 0-2zm.753-11-1.553 7h-10.4l-1.62-7z" fill="#fff"/>
+								<circle cx="10" cy="22" r="1" fill="#fff"/>
+								<circle cx="18" cy="22" r="1" fill="#fff"/>
+							</g>
+						</svg>
+					</a>
+				</div>
+				
+				<h5 class="mb-0">Description</h5>
+				<p>{{food.description}}</p>
+
+
+				<h5 class="mb-0">Ingredients</h5>
+				<p>{{food.ingredients}}</p>
+			</div>
+		</div>
+	</div>
+</template>
+<script>
+  export default (props, { $on }) => {
+	$on('pageInit', () => {
+		const food = $f7route.context;
+	});
+    const openDemo1 = () => {
+		$('.add-wishlist-btn').toggleClass('active');
+    }
+	return $render;
+  }
+</script>
